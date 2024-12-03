@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MP3-Player</title>
+  <link href="css/style.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<video id="background-video" autoplay muted loop>
+  <source src="video/background.mp4" type="video/mp4">
+  Dein Browser unterstützt keine Video-Wiedergabe.
+</video>
+<audio id="backgroundMusic" autoplay loop>
+  <source src="audio/13781_Winter Waltz.mp3" type="audio/mpeg">
+  Dein Browser unterstützt keine Audio-Wiedergabe.
+</audio>
+
+<h1>Mamas Weihnachtssongs</h1>
+
+<div>
+  <div class="snow"></div>
+</div>
+
+<div class="song-list">
+  <!-- Für jedes Lied ein Container -->
+  <div class="song-item">
+    <div class="song-image">
+      <img src="img/Faithful.jpg" alt="O Tannenbaum" class="cover-img">
+    </div>
+    <div class="song-title">
+      <a href="player.html?song=4">Come all Ye Faithful</a>
+    </div>
+    <div class="song-download">
+      <a href="audio/Come all Ye Faithful.mp3" download class="download-button">
+        <i class="fas fa-download"></i> <!-- Download-Icon von Font Awesome -->
+      </a>
+    </div>
+  </div>
+
+  <div class="song-item">
+    <div class="song-image">
+      <img src="img/drumm.jpg" alt="O Tannenbaum" class="cover-img">
+    </div>
+    <div class="song-title">
+      <a href="player.html?song=3">Drummer Boy</a>
+    </div>
+    <div class="song-download">
+      <a href="audio/Drummer Boy.mp3" download class="download-button">
+        <i class="fas fa-download"></i> <!-- Download-Icon von Font Awesome -->
+      </a>
+    </div>
+  </div>
+
+  <div class="song-item">
+    <div class="song-image">
+      <img src="img/1.jpg" alt="O Tannenbaum" class="cover-img">
+    </div>
+    <div class="song-title">
+      <a href="player.html?song=5">Feliz Navidad Normal</a>
+    </div>
+    <div class="song-download">
+      <a href="audio/FelizNavidad V1.mp3" download class="download-button">
+        <i class="fas fa-download"></i> <!-- Download-Icon von Font Awesome -->
+      </a>
+    </div>
+  </div>
+
+  <div class="song-item">
+    <div class="song-image">
+      <img src="img/2.jpg" alt="O Tannenbaum" class="cover-img">
+    </div>
+    <div class="song-title">
+      <a href="player.html?song=6">Feliz Navidad Lustig</a>
+    </div>
+    <div class="song-download">
+      <a href="audio/FelizNavidad V2.mp3" download class="download-button">
+        <i class="fas fa-download"></i> <!-- Download-Icon von Font Awesome -->
+      </a>
+    </div>
+  </div>
+
+  <div class="song-item">
+    <div class="song-image">
+      <img src="img/3.jpg" alt="O Tannenbaum" class="cover-img">
+    </div>
+    <div class="song-title">
+      <a href="player.html?song=7">Fröhliche Weihnacht</a>
+    </div>
+    <div class="song-download">
+      <a href="audio/Fröhliche Weihnacht.mp3" download class="download-button">
+        <i class="fas fa-download"></i> <!-- Download-Icon von Font Awesome -->
+      </a>
+    </div>
+  </div>
+
+  <div class="song-item">
+    <!-- Bild links -->
+    <div class="song-image">
+      <img src="img/jingle.jpg" alt="Jingle Bells" class="cover-img">
+    </div>
+    <!-- Titel in der Mitte -->
+    <div class="song-title">
+      <a href="player.html?song=1">Jingle Bells</a>
+    </div>
+    <!-- Download-Icon rechts -->
+    <div class="song-download">
+      <a href="audio/JingleBells.mp3" download class="download-button">
+        <i class="fas fa-download"></i> <!-- Download-Icon von Font Awesome -->
+      </a>
+    </div>
+  </div>
+
+  <div class="song-item">
+    <!-- Bild links -->
+    <div class="song-image">
+      <img src="img/5.jpg" alt="Jingle Bells" class="cover-img">
+    </div>
+    <!-- Titel in der Mitte -->
+    <div class="song-title">
+      <a href="player.html?song=8">Joy to the world</a>
+    </div>
+    <!-- Download-Icon rechts -->
+    <div class="song-download">
+      <a href="audio/JoyToTheWorld.mp3" download class="download-button">
+        <i class="fas fa-download"></i> <!-- Download-Icon von Font Awesome -->
+      </a>
+    </div>
+  </div>
+
+  <div class="song-item">
+    <!-- Bild links -->
+    <div class="song-image">
+      <img src="img/6.jpg" alt="Jingle Bells" class="cover-img">
+    </div>
+    <!-- Titel in der Mitte -->
+    <div class="song-title">
+      <a href="player.html?song=9">Kommet ihr Hirten</a>
+    </div>
+    <!-- Download-Icon rechts -->
+    <div class="song-download">
+      <a href="audio/Kommet ihr Hirten.mp3" download class="download-button">
+        <i class="fas fa-download"></i> <!-- Download-Icon von Font Awesome -->
+      </a>
+    </div>
+  </div>
+
+  <div class="song-item">
+    <!-- Bild links -->
+    <div class="song-image">
+      <img src="img/4.jpg" alt="Jingle Bells" class="cover-img">
+    </div>
+    <!-- Titel in der Mitte -->
+    <div class="song-title">
+      <a href="player.html?song=10">Morgen kommt der Nikolaus</a>
+    </div>
+    <!-- Download-Icon rechts -->
+    <div class="song-download">
+      <a href="audio/Lustig Lustig tralalalala.mp3" download class="download-button">
+        <i class="fas fa-download"></i> <!-- Download-Icon von Font Awesome -->
+      </a>
+    </div>
+  </div>
+
+  <div class="song-item">
+    <!-- Bild links -->
+    <div class="song-image">
+      <img src="img/7.jpg" alt="Jingle Bells" class="cover-img">
+    </div>
+    <!-- Titel in der Mitte -->
+    <div class="song-title">
+      <a href="player.html?song=11">Nun singet und seid froh</a>
+    </div>
+    <!-- Download-Icon rechts -->
+    <div class="song-download">
+      <a href="audio/Nun singet und seid froh.mp3" download class="download-button">
+        <i class="fas fa-download"></i> <!-- Download-Icon von Font Awesome -->
+      </a>
+    </div>
+  </div>
+
+  <div class="song-item">
+    <div class="song-image">
+      <img src="img/8.jpg" alt="O Tannenbaum" class="cover-img">
+    </div>
+    <div class="song-title">
+      <a href="player.html?song=12">O du fröhliche</a>
+    </div>
+    <div class="song-download">
+      <a href="audio/O du fröhliche.mp3" download class="download-button">
+        <i class="fas fa-download"></i> <!-- Download-Icon von Font Awesome -->
+      </a>
+    </div>
+  </div>
+
+  <div class="song-item">
+    <div class="song-image">
+      <img src="img/9.jpg" alt="O Tannenbaum" class="cover-img">
+    </div>
+    <div class="song-title">
+      <a href="player.html?song=13">O Tannenbaum</a>
+    </div>
+    <div class="song-download">
+      <a href="audio/OTannenbaum.mp3" download class="download-button">
+        <i class="fas fa-download"></i> <!-- Download-Icon von Font Awesome -->
+      </a>
+    </div>
+  </div>
+
+  <div class="song-item">
+    <div class="song-image">
+      <img src="img/10.jpg" alt="O Tannenbaum" class="cover-img">
+    </div>
+    <div class="song-title">
+      <a href="player.html?song=14">Rudolph</a>
+    </div>
+    <div class="song-download">
+      <a href="audio/Rudolph.mp3" download class="download-button">
+        <i class="fas fa-download"></i> <!-- Download-Icon von Font Awesome -->
+      </a>
+    </div>
+  </div>
+
+  <div class="song-item">
+    <div class="song-image">
+      <img src="img/11.jpeg" alt="O Tannenbaum" class="cover-img">
+    </div>
+    <div class="song-title">
+      <a href="player.html?song=15">Es ist ein Ros entsprungen</a>
+    </div>
+    <div class="song-download">
+      <a href="audio/Röslein.mp3" download class="download-button">
+        <i class="fas fa-download"></i> <!-- Download-Icon von Font Awesome -->
+      </a>
+    </div>
+  </div>
+
+  <div class="song-item">
+    <div class="song-image">
+      <img src="img/12.jpg" alt="O Tannenbaum" class="cover-img">
+    </div>
+    <div class="song-title">
+      <a href="player.html?song=16">Süßer die Glocken nie klingen</a>
+    </div>
+    <div class="song-download">
+      <a href="audio/Süßer die Glocken nie klingen.mp3" download class="download-button">
+        <i class="fas fa-download"></i> <!-- Download-Icon von Font Awesome -->
+      </a>
+    </div>
+  </div>
+
+  <div class="song-item">
+    <div class="song-image">
+      <img src="img/13.jpg" alt="O Tannenbaum" class="cover-img">
+    </div>
+    <div class="song-title">
+      <a href="player.html?song=17">We wish you a merry christmas</a>
+    </div>
+    <div class="song-download">
+      <a href="audio/We wish you a merry christmas.mp3" download class="download-button">
+        <i class="fas fa-download"></i> <!-- Download-Icon von Font Awesome -->
+      </a>
+    </div>
+  </div>
+
+  <div class="song-item">
+    <div class="song-image">
+      <img src="img/14.jpg" alt="O Tannenbaum" class="cover-img">
+    </div>
+    <div class="song-title">
+      <a href="player.html?song=17">Winter wonderland</a>
+    </div>
+    <div class="song-download">
+      <a href="audio/.mp3" download class="download-button">
+        <i class="fas fa-download"></i> <!-- Download-Icon von Font Awesome -->
+      </a>
+    </div>
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>

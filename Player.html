@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MP3 Player</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<video id="background-video" autoplay muted loop>
+  <source src="video/background.mp4" type="video/mp4">
+  Dein Browser unterstützt keine Video-Wiedergabe.
+</video>
+<div class="container">
+  <!-- Zurück-Button -->
+  <a href="index.html" class="back-button">&#8592; Zurück</a>
+
+  <h1 id="song-title" class="player-title">Jingle Bells</h1>
+
+  <div class="player-container">
+    <div class="player-image">
+      <img id="song-cover-img" src="" alt="Cover Bild" class="cover-img">
+    </div>
+    <audio id="audio-player" controls>
+      <source id="audio-source" src="" type="audio/mp3">
+      Dein Browser unterstützt keine Audio-Wiedergabe.
+    </audio>
+    <div class="volume-control">
+      <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+    </div>
+  </div>
+
+</div>
+<script src="js/Player.js"></script>
+</body>
+</html>

@@ -1,0 +1,449 @@
+/* Allgemeine Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  flex-direction: column;
+}
+
+#background-video {
+  position: fixed;      /* Video fixieren */
+  top: 0;               /* Oben ausrichten */
+  left: 0;              /* Links ausrichten */
+  width: 100%;          /* Video auf die volle Breite des Viewports strecken */
+  height: 100%;         /* Video auf die volle Höhe des Viewports strecken */
+  object-fit: cover;    /* Bild wird so skaliert, dass der gesamte Bildschirm abgedeckt wird */
+  z-index: -1;
+}
+
+.container {
+  background-color: transparent;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 600px;
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Zentriert alles horizontal */
+  justify-content: center; /* Zentriert alles vertikal */
+  height: 100vh; /* Höhe auf 100% des Viewports setzen */
+  position: relative;
+}
+
+.player-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  z-index: 1000;
+}
+
+h1 {
+  width: 100%;
+  background: linear-gradient(to right, #0066cc, #00ccff);  /* Leicht transparenter Hintergrund */
+  padding: 10px 0;
+  text-align: center;
+  font-family: 'MountainsofChristmas', normal;
+  z-index: 1000;  /* Stellt sicher, dass es über anderen Inhalten liegt */
+  font-size: 2.5rem;  /* Passende Schriftgröße */
+  color: white;  /* Farbe für den Text */
+  position: relative;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Song Liste */
+.song-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#song-list li {
+  margin: 15px 0;
+}
+
+#song-list a {
+  font-family: 'MountainsofChristmas', normal, fantasy;
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: #0066cc;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+  background-color: #f9f9f9;
+}
+
+#song-list a:hover {
+  background-color: #007bff;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+footer p {
+  margin-top: 10px;
+}
+
+/* Bild oberhalb des Players */
+.player-image {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.cover-img {
+  width: 100%; /* Bild füllt die gesamte Breite des Containers */
+  height: 100%; /* Bild bleibt proportional */
+  object-fit: cover;
+  object-position: top;
+}
+
+#song-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Einzelner Song-Container */
+.song-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+
+  background-color: rgba(0, 0, 0, 0.5);
+
+  /* Leichte Schatten für mehr Tiefe */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+  /* Um den Container auch zu umschließen, Padding hinzufügen */
+  box-sizing: border-box;
+}
+
+/* Bild links */
+.song-image {
+  flex: 0 0 auto;
+  max-width: 50px;
+}
+
+.song-image img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Titel in der Mitte */
+.song-title {
+  font-family: 'MountainsofChristmas', normal;
+  flex: 3;
+  text-align: center;
+  font-size: 1.2rem;
+  background-color: transparent;
+
+  /* Linearer Farbverlauf */
+  background: linear-gradient(45deg, #ff0000, #ff7300, #ffe600, #47ff00, #00ffee, #0041ff);
+
+  /* Text transparent machen, um den Farbverlauf sichtbar zu machen */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.song-title a {
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+
+  /* Linearen Farbverlauf von links nach rechts */
+  background: transparent linear-gradient(to right, #0066cc, #00ccff);
+  background-size: 200% 100%; /* Hintergrundgröße anpassen, um den Bewegungsbereich zu erweitern */
+
+  /* Text transparent machen, um den Farbverlauf sichtbar zu machen */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Animation für den bewegenden Gradienten */
+  animation: gradientMove 3s linear infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0% 0;
+  }
+}
+
+/* Container für den Player */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Container für den Audioplayer und die Regler */
+.player-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;  /* Setzt den Container auf 100% der verfügbaren Breite */
+}
+
+/* Lautstärkeregler */
+.volume-control {
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;  /* Lautstärkeregler bekommt 100% der Breite */
+  max-width: 300px;  /* Optional: Maximale Breite auf 300px setzen */
+}
+
+#audio-player {
+  width: 100%;
+  max-width: 600px; /* Maximale Breite des Players */
+  background: linear-gradient(to right, #0066cc, #00ccff); /* Gradient von Koralle zu Himmelblau */
+  border-radius: 10px; /* Ecken abrunden */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optionaler Schatten */
+  padding: 10px; /* Padding für den inneren Abstand */
+  margin: 20px 0; /* Margin für den Abstand zum Rest der Seite */
+  color: white; /* Setzt die Textfarbe für alle Elemente im Player auf Weiß */
+}
+
+/* Hintergrund und Textfarbe für die Steuerleiste (Play/Pause und andere Steuerungen) */
+#audio-player::-webkit-media-controls-panel {
+  background: linear-gradient(to right, #0066cc, #00ccff); /* Gleicher Farbverlauf wie für den gesamten Player */
+  border-radius: 8px; /* Ecken abrunden */
+  color: white; /* Alle Textinhalte innerhalb der Steuerleiste auf Weiß setzen */
+}
+
+/* Hintergrund für die Play/Pause-Button und andere Steuerelemente (Chrome, Safari) */
+#audio-player::-webkit-media-controls-play-button,
+#audio-player::-webkit-media-controls-volume-slider {
+  background-color: transparent; /* Korallenfarbener Hintergrund für Buttons */
+  color: white; /* Textfarbe für die Steuerelemente auf Weiß setzen */
+  border-radius: 50%; /* Runde Form für Buttons */
+}
+
+/* Hintergrund und Textfarbe für Lautstärkeregler */
+#audio-player::-webkit-media-controls-volume-slider {
+  background: linear-gradient(to right, #0066cc, #00ccff); /* Farbverlauf für den Lautstärkeregler */
+  border-radius: 10px; /* Ecken abrunden */
+  color: white; /* Textfarbe im Lautstärkeregler auf Weiß setzen */
+}
+
+/* Lautstärkeregler (range input) */
+#volume {
+  width: 100%;  /* Setzt die Breite des Reglers auf 100% der Eltern-Element-Breite */
+  height: 8px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(to right, #0066cc, #00ccff); /* Farbverlauf */
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Stil für den Daumen des Reglers */
+#volume::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #333;
+  cursor: pointer;
+}
+
+/* Für Firefox */
+#volume::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #333;
+  cursor: pointer;
+}
+
+/* Für IE */
+#volume::-ms-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #333;
+  cursor: pointer;
+}
+
+
+
+.player-title{
+  font-family: 'MountainsofChristmas', normal;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+/* Download-Icon rechts */
+.song-download {
+  flex: 0 0 auto;
+  margin-left: 10px;
+}
+
+.download-button {
+  display: inline-flex; /* Macht die Schaltfläche flexibler */
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: black; /* Blau für den Button */
+  color: white; /* Weiße Farbe für das Icon */
+  border-radius: 50%; /* Runde Form */
+  text-decoration: none; /* Entfernt den Link-Unterstrich */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 1.5rem; /* Größe des Icons */
+}
+
+.download-button:hover {
+  background-color: gold; /* Dunkleres Blau beim Hover */
+  transform: scale(1.1); /* Vergrößerung beim Hover */
+}
+
+.download-button i {
+  margin: 0; /* Entfernt mögliche Abstände */
+}
+
+.download-icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  background-color: transparent;
+  border: none;
+}
+
+.download-icon:hover {
+  transform: scale(1.1);
+}
+
+
+.back-button {
+  position: absolute;
+  top: 20px; /* Abstand vom oberen Rand */
+  left: 20px; /* Abstand vom linken Rand */
+  font-size: 1.2rem;
+  color: #0066cc;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+
+.snow, .snow:after, .snow:before{
+  content: '';
+  position: absolute;
+  top: -650px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    radial-gradient(4px 4px at 100px 50px, #ffffff, transparent),
+    radial-gradient(6px 6px at 200px 150px, #ffffff, transparent),
+    radial-gradient(3px 3px at 300px 250px, #ffffff, transparent),
+    radial-gradient(4px 4px at 400px 350px, #ffffff, transparent),
+    radial-gradient(6px 6px at 500px 100px, #ffffff, transparent),
+    radial-gradient(3px 3px at 50px 200px, #ffffff, transparent),
+    radial-gradient(4px 4px at 150px 300px, #ffffff, transparent),
+    radial-gradient(6px 6px at 250px 400px, #ffffff, transparent),
+    radial-gradient(3px 3px at 350px 500px, #ffffff, transparent);
+  background-size: 650px 650px;
+
+  animation: snowAnim 3s linear;
+  animation-iteration-count: infinite;
+
+  pointer-events: none;
+
+}
+
+.snow:after{
+  margin-left: -250px;
+  opacity: 0.5;
+  filter: blur(2px);
+  animation-direction: reverse;
+  animation-duration: 6s;
+}
+.snow:before{
+  margin-left: -350px;
+  opacity: 0.7;
+  filter: blur(1px);
+}
+
+@keyframes snowAnim {
+  from{
+    transform: translateY(0);
+  }
+  to{
+    transform: translateY(650px);
+  }
+}
