@@ -2,7 +2,7 @@
 const songs = {
   1: { title: "Jingle Bells", url: "audio/JingleBells.mp3", image: "img/jingle.jpg" },
   2: { title: "O Tannenbaum", url: "audio/O Tannenbaum.mp3", image: "img/o-tannenbaum.jpg" },
-  3: { title: "Drummer Boy", url: "audio/Drummer Boy.mp3", image: "img/drummer.jpg" },
+  3: { title: "Drummer Boy", url: "audio/Drummer Boy.mp3", image: "img/drumm.jpg" },
   4: { title: "Come all Ye Faithful", url: "audio/Come all Ye Faithful.mp3", image: "img/Faithful.jpg" },
   5: { title: "Feliz Navidad Normal", url: "audio/Feliz Navidad V1.mp3", image: "img/1.jpg" },
   6: { title: "Feliz Navidad Lustig", url: "audio/Feliz Navidad V2.mp3", image: "img/2.jpg" },
