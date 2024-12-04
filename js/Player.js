@@ -15,7 +15,7 @@ const songs = {
   13: {title: "O Tannenbaum", url: "audio/O Tannenbaum.mp3", image: "img/9.jpg" },
   14: {title: "Rudolph", url: "audio/Rudolph.mp3", image: "img/10.jpg" },
   15: {title: "Es ist ein Ros entsprungen", url: "audio/Röslein.mp3", image: "img/11.jpeg" },
-  16: {title: "Süßer die Glocken nie klingen", url: "audio/Süßer die Glocken nie klingen.mp3", image: "img/12.jpg" },
+  16: {title: "Süßer die Glocken nie klingen", url: "audio/Süßer die Glocken nie Klingen.mp3", image: "img/12.jpg" },
   17: {title: "We wish you a merry christmas", url: "audio/We wish you a merry christmas.mp3", image: "img/13.jpg" },
   18: {title: "Winter wonderland", url: "audio/Winter Wonderland.mp3", image: "img/14.jpg" },
 };
